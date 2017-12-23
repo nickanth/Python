@@ -1,0 +1,56 @@
+
+
+
+
+import random
+import sys
+import os
+import time
+import datetime
+
+
+
+			
+global counter
+
+
+
+
+
+def run():
+	#is the input a palyindrom?
+	stringinput = input("Give me an input please\n:");
+	stringinput = stringinput.lower();
+	print(stringinput[::-1]);
+	
+	#so is the string the same after i turn it arround?
+	if stringinput[::-1] == stringinput:
+		#True 
+		palyindrome();
+		
+                
+		#False
+	else:
+		No_palyindrome();
+               
+
+def No_palyindrome():
+	print("The word you inserted is not a palyindrome.");
+
+
+
+
+def palyindrome():
+		print("This is a palindrome")
+
+
+
+
+
+
+
+
+
+
+run();
+input();
