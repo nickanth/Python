@@ -1,0 +1,132 @@
+
+
+
+
+
+
+  import tkinter #tkinter for the buttons
+  import time #just in case i want to have breaks
+  import os
+  import sys
+
+  from tkinter import *
+  from tkinter import ttk
+
+
+
+  #the math's
+
+  #im sorry for the names. Im not really good at names.
+
+
+  def alpha():
+      dec = input("number\n:");
+      print("");
+      print("");
+      print("The number ", dec, "is:")
+      print("");
+      bin1 = bin (int(dec));
+      print(bin1, "in binary.")
+      print("");
+      print("")
+      print("")
+      oct1 = oct(int(dec));
+      print("")
+      print(oct1, "in octal.");
+      print("");
+      hex1 = hex(int(dec));
+      print(hex1, "in hex.");
+      print("")
+      print("");
+      print("");
+
+
+
+  def beta():
+      print("Hex into decimal");
+      hex2 = str(input("Hex number\n:"))
+      print("Hex into decimal");
+      i = int(hex2, 16)
+      print("")
+      print("")
+      print(i)
+
+
+
+  def gamma():
+      print("Oct into decimal");
+      print("");
+      oct2 = str(input("Oct number\n:"))
+      print("Oct into decimal");
+      i = int(oct2, 8)
+      print("")
+      print("")
+      print(i)
+
+
+
+
+  def delta():
+      print("Binary into decimal");
+      print("");
+      bin2 = str(input("Binary number\n:"))
+      print("Binary into decimal");
+      i = int(bin2, 2)
+      print("")
+      print("")
+      print(i)
+
+
+  def restart_program():
+
+      python = sys.executable
+      os.execl(python, python, * sys.argv)
+
+
+
+  #buttons
+  root = Tk()
+
+  root.geometry("400x450");
+  root.title("The different calculator");
+
+
+  #the buttons for the math's 
+  app = Frame(root);
+  app.grid();
+
+  button1 = Button(app, text = "DEC", command = alpha);
+
+  button1.config( height = 5, width = 60 )
+  button1.grid();
+
+
+  button2 = Button(app)
+  button2.grid();
+  button2.configure(text = "HEX", height = 5, width = 60, command = beta)
+
+
+  button3 = Button(app)
+  button3.grid();
+  button3.configure(text = "OCT", height = 5, width = 60, command = gamma)
+
+
+
+
+  button4 = Button(app)
+  button4.grid();
+  button4.configure(text = "BIN" , height = 5, width = 60, command = delta )
+
+
+
+  button5 = Button(app)
+  button5.grid();
+  button5.configure(text = "Restart" , height = 5, width = 60, command = restart_program );
+
+
+
+
+  root.mainloop();
+
+
+
