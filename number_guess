@@ -1,0 +1,70 @@
+Hey therer 
+Here is a little number guess game. Just for fun and for practice. 
+Enjoy!! // Nick
+
+
+
+
+#code
+
+
+import random
+import sys
+import os
+
+
+
+global counter
+
+counter = 1
+
+global x
+global y
+
+
+#a self made random_number generator 
+x = [1,2,3,4,5,6,7,8,9,10];
+z = [1,2,3,4,5,6,7,8,9,10];
+
+
+
+
+
+t = random.choice(z);
+y = random.choice(x);
+
+number_ = t + y
+
+
+#this is out of the loop, so it is displayed just one time.
+def intro_guess():
+    print("The number is between 2-20");
+    number_guess()
+
+#main code
+def number_guess():
+    global counter
+    
+
+    guess = int(input("Guess the number"));
+
+    if guess == number_:
+            print("That is the number");
+            print(number_);
+            print("Du hast",counter,"Versuche benötigt um die Zahl zufinden.");
+
+
+    if guess < number_:
+            print("Guess higher");
+            counter = counter + 1
+            number_guess()
+    if guess > number_:
+            print("Guess lower");
+            counter = counter + 1
+            number_guess()
+
+
+
+intro_guess();
+
+
